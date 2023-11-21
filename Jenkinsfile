@@ -4,12 +4,12 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/lukegadex/CEIT.git']])
+                checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/Blaisekilang4851/LSA-Capstone-Project-Continuous-Intergration-Continuous-Development.git']])
             }
         }
          stage('Test') {
             steps {
-                git branch: 'main', url: 'https://github.com/lukegadex/CEIT.git'
+                git branch: 'main', url: 'https://github.com/Blaisekilang4851/LSA-Capstone-Project-Continuous-Intergration-Continuous-Development.git'
                 sh 'python3 jenkins.py'
             }
         }
